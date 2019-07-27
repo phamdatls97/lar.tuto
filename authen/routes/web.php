@@ -81,6 +81,71 @@ Route::prefix('admin')->group(function (){
     Route::get('content/tag',function (){
         return view('admin.content.content.tag.index');
     });
+
+    //--------Route admin menu--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('menu',function (){
+        return view('admin.content.menu.index');
+    });
+    Route::get('menuitems',function (){
+        return view('admin.content.menuitem.index');
+    });
+
+    //--------Route admin users--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('users',function (){
+        return view('admin.content.users.index');
+    });
+
+    //--------Route admin media--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('media',function (){
+        return view('admin.content.media.index');
+    });
+
+    //--------Route admin config--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('config',function (){
+        return view('admin.content.config.index');
+    });
+
+    //--------Route admin newletters--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('newletters',function (){
+        return view('admin.content.newletters.index');
+    });
+
+    //--------Route admin banners--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('banners',function (){
+        return view('admin.content.banners.index');
+    });
+
+    //--------Route admin contacts--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('contact',function (){
+        return view('admin.content.contacts.index');
+    });
+
+    //--------Route admin email--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('email/inbox',function (){
+        return view('admin.content.email.index');
+    });
+    Route::get('email/draft',function (){
+        return view('admin.content.email.draft');
+    });
+    Route::get('email/send',function (){
+        return view('admin.content.email.send');
+    });
 });
 
 /**
