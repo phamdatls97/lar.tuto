@@ -36,7 +36,51 @@ Route::prefix('admin')->group(function (){
     //Method: post
     Route::post('login','Auth\Admin\LoginController@loginAdmin')->name('admin.auth.loginAdmin');
     //Route tra ve view dang xuat
-    Route::get('logout','Auth\Admin\LoginController@logout')->name('admin.auth.logout');
+    Route::post('logout','Auth\Admin\LoginController@logout')->name('admin.auth.logout');
+
+    //--------Route admin shopping--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('shop/category',function (){
+        return view('admin.content.shop.category.index');
+    });
+    Route::get('shop/product',function (){
+        return view('admin.content.shop.product.index');
+    });
+    Route::get('shop/order',function (){
+        return view('admin.content.shop.order.index');
+    });
+    Route::get('shop/review',function (){
+        return view('admin.content.shop.review.index');
+    });
+    Route::get('shop/customer',function (){
+        return view('admin.content.shop.customer.index');
+    });
+    Route::get('shop/brand',function (){
+        return view('admin.content.shop.brand.index');
+    });
+    Route::get('shop/statistic',function (){
+        return view('admin.content.shop.statistic.index');
+    });
+    Route::get('shop/product/order',function (){
+        return view('admin.content.shop.adminorder.index');
+    });
+
+    //--------Route admin content--------
+    //------------------------------------
+    //------------------------------------
+    Route::get('content/category',function (){
+        return view('admin.content.content.category.index');
+    });
+    Route::get('content/post',function (){
+        return view('admin.content.content.post.index');
+    });
+    Route::get('content/page',function (){
+        return view('admin.content.content.page.index');
+    });
+    Route::get('content/tag',function (){
+        return view('admin.content.content.tag.index');
+    });
 });
 
 /**
@@ -57,7 +101,7 @@ Route::prefix('seller')->group(function (){
     //Method: post
     Route::post('login','Auth\Seller\LoginController@loginSeller')->name('seller.auth.loginSeller');
     //Route tra ve view dang xuat
-    Route::get('logout','Auth\Seller\LoginController@logout')->name('seller.auth.logout');
+    Route::post('logout','Auth\Seller\LoginController@logout')->name('seller.auth.logout');
 });
 
 /**
