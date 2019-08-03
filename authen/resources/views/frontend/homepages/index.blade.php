@@ -1,4 +1,9 @@
+@extends('frontend.layouts.fashion')
+@section('title')
+    Trang chủ
+@endsection
 
+@section('content')
 <div class="banner-agile">
     <div class="container">
         <h2>WELCOME TO</h2>
@@ -54,7 +59,7 @@
                     <div class="tab-1 resp-tab-content">
                         <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp1.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp1.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -75,7 +80,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp2">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp2.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp2.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -96,7 +101,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp3">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp3.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp3.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -117,7 +122,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp4">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp4.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp4.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -140,7 +145,7 @@
                         <div class="top-products-set2">
                             <div class="col-md-3 top-product-grids tp5">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/ip2.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/ip2.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -161,7 +166,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp6">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/shp8.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/shp8.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -182,7 +187,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp7">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/cap1.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/cap1.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -203,7 +208,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/wap3.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/wap3.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -228,7 +233,7 @@
                     <div class="tab-1 resp-tab-content">
                         <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp5.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp5.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -249,7 +254,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp2">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp6.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp6.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -270,7 +275,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp3">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp7.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp7.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -291,7 +296,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp4">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp8.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp8.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -314,7 +319,7 @@
                         <div class="top-products-set2">
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/wp8.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/wp8.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -335,7 +340,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/wp5.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/wp5.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -356,7 +361,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/wp4.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/wp4.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -377,7 +382,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/wp3.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/wp3.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -402,7 +407,7 @@
                     <div class="tab-1 resp-tab-content">
                         <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp9.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp9.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -423,7 +428,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp2">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp10.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp10.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -444,7 +449,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp3">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp11.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp11.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -465,7 +470,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp4">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp12.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp12.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -488,7 +493,7 @@
                         <div class="top-products-set2">
                             <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/hp9.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/hp9.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -509,7 +514,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/hp8.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/hp8.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -530,7 +535,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/hp7.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/hp7.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -551,7 +556,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/hp3.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/hp3.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -576,7 +581,7 @@
                     <div class="tab-1 resp-tab-content">
                         <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp13.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp13.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -597,7 +602,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp2">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp14.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp14.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -618,7 +623,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp3">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp15.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp15.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -639,7 +644,7 @@
                         </div>
                         <div class="col-md-3 top-product-grids tp4">
                             <a href="single.html"><div class="product-img">
-                                    <img src="images/tp16.jpg" alt="" />
+                                    <img src="{{asset('frontend_assets/images')}}/tp16.jpg" alt="" />
                                     <div class="p-mask">
                                         <form action="#" method="post">
                                             <input type="hidden" name="cmd" value="_cart" />
@@ -662,7 +667,7 @@
                         <div class="top-products-set2">
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/cp5.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/cp5.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -683,7 +688,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/cp4.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/cp4.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -704,7 +709,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/cp7.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/cp7.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -725,7 +730,7 @@
                             </div>
                             <div class="col-md-3 top-product-grids tp4">
                                 <a href="single.html"><div class="product-img">
-                                        <img src="images/cp8.jpg" alt="" />
+                                        <img src="{{asset('frontend_assets/images')}}/cp8.jpg" alt="" />
                                         <div class="p-mask">
                                             <form action="#" method="post">
                                                 <input type="hidden" name="cmd" value="_cart" />
@@ -752,7 +757,7 @@
         </div>
     </div>
 </div>
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script src="{{asset('frontend_assets/js')}}/easyResponsiveTabs.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#horizontalTab').easyResponsiveTabs({
@@ -803,21 +808,21 @@
                     <div class="wmuSliderWrapper">
                         <article style="position: absolute; width: 100%; opacity: 0;">
                             <div class="banner-wrap">
-                                <img src="images/c1.png" alt=" " class="img-responsive" />
+                                <img src="{{asset('frontend_assets/images')}}/c1.png" alt=" " class="img-responsive" />
                                 <p>Nam elementum magna id nibh pretium suscipit varius tortor. Phasellus in lorem sed massa consectetur fermentum. Praesent pellentesque sapien euismod.</p>
                                 <h4># Andrew</h4>
                             </div>
                         </article>
                         <article style="position: absolute; width: 100%; opacity: 0;">
                             <div class="banner-wrap">
-                                <img src="images/c2.png" alt=" " class="img-responsive" />
+                                <img src="{{asset('frontend_assets/images')}}/c2.png" alt=" " class="img-responsive" />
                                 <p>Morbi semper, risus dignissim sagittis iaculis, diam est ornare neque, accumsan risus tortor at est. Vivamus auctor quis lacus sed interdum celerisque.</p>
                                 <h4># Lucy</h4>
                             </div>
                         </article>
                         <article style="position: absolute; width: 100%; opacity: 0;">
                             <div class="banner-wrap">
-                                <img src="images/c3.png" alt=" " class="img-responsive" />
+                                <img src="{{asset('frontend_assets/images')}}/c3.png" alt=" " class="img-responsive" />
                                 <p>Fusce non cursus quam, in hendrerit sem. Nam nunc dui, venenatis vitae porta sed, sagittis id nisl. Pellentesque celerisque  eget ullamcorper vehicula. </p>
                                 <h4># Martina</h4>
                             </div>
@@ -828,7 +833,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
-    <script src="js/jquery.wmuSlider.js"></script>
+    <script src="{{asset('frontend_assets/js')}}/jquery.wmuSlider.js"></script>
     <script>
         $('.example1').wmuSlider();
     </script>
@@ -840,19 +845,19 @@
         <div class="sliderfig">
             <ul id="flexiselDemo1">
                 <li>
-                    <img src="images/4.png" alt=" " class="img-responsive" />
+                    <img src="{{asset('frontend_assets/images')}}/4.png" alt=" " class="img-responsive" />
                 </li>
                 <li>
-                    <img src="images/5.png" alt=" " class="img-responsive" />
+                    <img src="{{asset('frontend_assets/images')}}/5.png" alt=" " class="img-responsive" />
                 </li>
                 <li>
-                    <img src="images/6.png" alt=" " class="img-responsive" />
+                    <img src="{{asset('frontend_assets/images')}}/6.png" alt=" " class="img-responsive" />
                 </li>
                 <li>
-                    <img src="images/7.png" alt=" " class="img-responsive" />
+                    <img src="{{asset('frontend_assets/images')}}/7.png" alt=" " class="img-responsive" />
                 </li>
                 <li>
-                    <img src="images/46.jpg" alt=" " class="img-responsive" />
+                    <img src="{{asset('frontend_assets/images')}}/46.jpg" alt=" " class="img-responsive" />
                 </li>
             </ul>
         </div>
@@ -883,7 +888,8 @@
 
             });
         </script>
-        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+        <script type="text/javascript" src="{{asset('frontend_assets/js')}}/jquery.flexisel.js"></script>
     </div>
 </div>
 <!-- //top-brands -->
+@endsection
