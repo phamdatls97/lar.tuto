@@ -20,13 +20,13 @@
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Slug</label>
                     <div class="col-sm-8">
-                        <input type="text" name="slug" class="form-control1" id="focusedinput" value="{{$cat->slug}} placeholder="Default Input">
+                        <input type="text" name="slug" class="form-control1" id="focusedinput" value="{{$cat->slug}}" placeholder="Default Input">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Images</label>
                     <div class="col-sm-8">
-                        <input type="text" name="images" class="form-control1" id="focusedinput" value="{{$cat->images}} placeholder="Default Input">
+                        <input type="text" name="images" class="form-control1" id="focusedinput" value="{{$cat->images}}" placeholder="Default Input">
                     </div>
                 </div>
 
