@@ -9,6 +9,15 @@
     <div class="row">
         <h3 class="title1">General Form :</h3>
         <div class="form-three widget-shadow">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form name="product" action="{{url('admin/shop/product/'.$product->id)}}" method="post" class="form-horizontal">
                 @csrf
                 <div class="form-group">

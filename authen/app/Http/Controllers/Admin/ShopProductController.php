@@ -38,6 +38,16 @@ class ShopProductController extends Controller
         return view('admin.content.shop.product.delete',$data);
     }
     public function store(Request $request){
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required',
+            'images' => 'required',
+            'priceCore' => 'required|numberic',
+            'priceSale' => 'required|numberic',
+            'stock' => 'required',
+            'intro' => 'required',
+            'desc' => 'required',
+        ]);
         $input = $request->all();
         $item = new ShopProductModel();
 
@@ -56,6 +66,16 @@ class ShopProductController extends Controller
 
     }
     public function update(Request $request, $id){
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required',
+            'images' => 'required',
+            'priceCore' => 'required|numberic',
+            'priceSale' => 'required|numberic',
+            'stock' => 'required',
+            'intro' => 'required',
+            'desc' => 'required',
+        ]);
         $input = $request->all();
         $item  = ShopProductModel::find($id);
 

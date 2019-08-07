@@ -18,7 +18,7 @@
                     </ul>
                 </div>
             @endif
-            <form name="category" action="{{url('admin/shop/category/'.$cat->id)}}" method="post" class="form-horizontal">
+            <form name="category" action="{{url('admin/content/category/'.$cat->id)}}" method="post" class="form-horizontal">
                 @csrf
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Tên danh mục</label>

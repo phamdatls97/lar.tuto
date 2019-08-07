@@ -2,40 +2,25 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Admin\ContentCategoryModel;
+use App\Model\Admin\ShopCategoryModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Admin\ShopCategoryModel;
 use Illuminate\Support\Facades\DB;
-
-class ShopCategoryController extends Controller
+class ContentCategoryController extends Controller
 {
     //
+
     public function index(){
-        $items = DB::table('shop_category')->paginate(5);
+        $items = DB::table('content_category')->paginate(5);
         $data = array();
         $data['cats'] = $items;
-        return view('admin.content.shop.category.index',$data);
+        return view('admin.content.content.category.index',$data);
     }
-
     public function create(){
         $data = array();
-        return view('admin.content.shop.category.submit',$data);
+        return view('admin.content.content.category.submit',$data);
     }
-
-    public function edit($id){
-        $data = array();
-        $item = ShopCategoryModel::find($id);
-        $data['cat'] = $item;
-        return view('admin.content.shop.category.edit',$data);
-    }
-
-    public function delete($id){
-        $data = array();
-        $item = ShopCategoryModel::find($id);
-        $data['cat'] = $item;
-        return view('admin.content.shop.category.delete',$data);
-    }
-
     public function store(Request $request){
 
         $validatedData = $request->validate([
@@ -47,7 +32,7 @@ class ShopCategoryController extends Controller
         ]);
 
         $input = $request->all();
-        $item = new ShopCategoryModel();
+        $item = new ContentCategoryModel();
 
         $item->name = $input['name'];
         $item->slug = $input['slug'];
@@ -56,10 +41,14 @@ class ShopCategoryController extends Controller
         $item->desc = $input['desc'];
 
         $item->save();
-        return redirect('/admin/shop/category');
-
+        return redirect('/admin/content/category');
     }
-
+    public function edit($id){
+        $data = array();
+        $item = ContentCategoryModel::find($id);
+        $data['cat'] = $item;
+        return view('admin.content.content.category.edit',$data);
+    }
     public function update(Request $request, $id){
         $validatedData = $request->validate([
             'name' => 'required|max:255',
@@ -69,7 +58,7 @@ class ShopCategoryController extends Controller
             'desc' => 'required',
         ]);
         $input = $request->all();
-        $item  = ShopCategoryModel::find($id);
+        $item  = ContentCategoryModel::find($id);
 
         $item->name = $input['name'];
         $item->slug = $input['slug'];
@@ -78,13 +67,18 @@ class ShopCategoryController extends Controller
         $item->desc = $input['desc'];
 
         $item->save();
-        return redirect('/admin/shop/category');
+        return redirect('/admin/content/category');
     }
-
+    public function delete($id){
+        $data = array();
+        $item = ContentCategoryModel::find($id);
+        $data['cat'] = $item;
+        return view('admin.content.content.category.delete',$data);
+    }
     public function destroy($id){
-        $item  = ShopCategoryModel::find($id);
+        $item  = ContentCategoryModel::find($id);
 
         $item->delete();
-        return redirect('/admin/shop/category');
+        return redirect('/admin/content/category');
     }
 }
