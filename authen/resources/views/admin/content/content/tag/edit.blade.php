@@ -1,10 +1,10 @@
 @extends('admin.layouts.glance')
 
 @section('title')
-    Thêm mới trang
+    Danh mục nội dung
 @endsection
 @section('content')
-    <h1>Thêm mới trang</h1>
+    <h1>Sửa tag {{$tag->id.':'.$tag->name}}</h1>
 
     <div class="row">
         <h3 class="title1">General Form :</h3>
@@ -18,34 +18,29 @@
                     </ul>
                 </div>
             @endif
-            <form name="page" action="{{url('admin/content/page')}}" method="post" class="form-horizontal">
+            <form name="tag" action="{{url('admin/content/tag/'.$tag->id)}}" method="post" class="form-horizontal">
                 @csrf
                 <div class="form-group">
-                    <label for="focusedinput" class="col-sm-2 control-label">Tên sản phẩm</label>
+                    <label for="focusedinput" class="col-sm-2 control-label">Tên bài viết</label>
                     <div class="col-sm-8">
-                        <input type="text" name="name" value="{{old('name')}}" class="form-control1" id="focusedinput" placeholder="Default Input">
+                        <input type="text" name="name" class="form-control1" id="focusedinput" value="{{$tag->name}}" placeholder="Default Input">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Slug</label>
                     <div class="col-sm-8">
-                        <input type="text" name="slug" value="{{old('slug')}}" class="form-control1" id="focusedinput" placeholder="Default Input">
+                        <input type="text" name="slug" class="form-control1" id="focusedinput" value="{{$tag->slug}}" placeholder="Default Input">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Images</label>
                     <div class="col-sm-8">
-                        <input type="text" name="images" value="{{old('images')}}" class="form-control1" id="focusedinput" placeholder="Default Input">
+                        <input type="text" name="images" class="form-control1" id="focusedinput" value="{{$tag->images}}" placeholder="Default Input">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="txtarea1" class="col-sm-2 control-label">Mô tả ngắn</label>
-                    <div class="col-sm-8"><textarea name="intro" id="txtarea1" cols="50" rows="4" class="form-control1">{{old('intro')}}</textarea></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="txtarea1" class="col-sm-2 control-label">Mô tả</label>
-                    <div class="col-sm-8"><textarea name="desc" id="txtarea1" cols="50" rows="4" class="form-control1">{{old('desc')}}</textarea></div>
+                    <div class="col-sm-8"><textarea name="intro" id="txtarea1" cols="50" rows="4" class="form-control1">{{$tag->intro}}</textarea></div>
                 </div>
 
                 <div class="col-sm-offset-2">
@@ -54,5 +49,4 @@
             </form>
         </div>
     </div>
-
 @endsection

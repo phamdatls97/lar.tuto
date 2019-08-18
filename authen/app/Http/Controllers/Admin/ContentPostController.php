@@ -25,7 +25,7 @@ class ContentPostController extends Controller
     public function edit($id){
         $data = array();
         $item = ContentPostModel::find($id);
-        $data['product'] = $item;
+        $data['post'] = $item;
         $cats = ContentPostModel::all();
         $data['cats'] = $cats;
         return view('admin.content.content.post.edit',$data);
@@ -33,7 +33,7 @@ class ContentPostController extends Controller
     public function delete($id){
         $data = array();
         $item = ContentPostModel::find($id);
-        $data['product'] = $item;
+        $data['post'] = $item;
         return view('admin.content.content.post.delete',$data);
     }
     public function store(Request $request){
@@ -46,7 +46,6 @@ class ContentPostController extends Controller
         ]);
         $input = $request->all();
         $item = new ContentPostModel();
-
         $item->name = $input['name'];
         $item->slug = $input['slug'];
         $item->images = $input['images'];

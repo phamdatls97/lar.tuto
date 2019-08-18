@@ -2,35 +2,35 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Admin\ContentPageModel;
+use App\Model\Admin\ContentTagModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class ContentPageController extends Controller
+class ContentTagController extends Controller
 {
     //
     public function index(){
-        $items = DB::table('content_pages')->paginate(5);
+        $items = DB::table('content_tags')->paginate(5);
         $data = array();
-        $data['pages'] = $items;
-        return view('admin.content.content.page.index',$data);
+        $data['tags'] = $items;
+        return view('admin.content.content.tag.index',$data);
     }
     public function create(){
         $data = array();
-        return view('admin.content.content.page.submit',$data);
+        return view('admin.content.content.tag.submit',$data);
     }
     public function edit($id){
         $data = array();
-        $item = ContentPageModel::find($id);
-        $data['page'] = $item;
-        return view('admin.content.content.page.edit',$data);
+        $item = ContentTagModel::find($id);
+        $data['tag'] = $item;
+        return view('admin.content.content.tag.edit',$data);
     }
     public function delete($id){
         $data = array();
-        $item = ContentPageModel::find($id);
-        $data['page'] = $item;
-        return view('admin.content.content.page.delete',$data);
+        $item = ContentTagModel::find($id);
+        $data['tag'] = $item;
+        return view('admin.content.content.tag.delete',$data);
     }
     public function store(Request $request){
         $validatedData = $request->validate([
@@ -38,19 +38,17 @@ class ContentPageController extends Controller
             'slug' => 'required',
             'images' => 'required',
             'intro' => 'required',
-            'desc' => 'required',
         ]);
         $input = $request->all();
-        $item = new ContentPageModel();
+        $item = new ContentTagModel();
         $item->name = $input['name'];
         $item->slug = $input['slug'];
         $item->images = $input['images'];
         $item->author_id = isset($input['author_id']) ? $input['author_id'] : 0;
         $item->view = isset($input['view']) ? $input['view'] : 0;
         $item->intro = $input['intro'];
-        $item->desc = $input['desc'];
         $item->save();
-        return redirect('/admin/content/page');
+        return redirect('/admin/content/tag');
 
     }
     public function update(Request $request, $id){
@@ -59,10 +57,9 @@ class ContentPageController extends Controller
             'slug' => 'required',
             'images' => 'required',
             'intro' => 'required',
-            'desc' => 'required',
         ]);
         $input = $request->all();
-        $item  = ContentPageModel::find($id);
+        $item  = ContentTagModel::find($id);
 
         $item->name = $input['name'];
         $item->slug = $input['slug'];
@@ -70,14 +67,13 @@ class ContentPageController extends Controller
         $item->author_id = isset($input['author_id']) ? $input['author_id'] : 0;
         $item->view = isset($input['view']) ? $input['view'] : 0;
         $item->intro = $input['intro'];
-        $item->desc = $input['desc'];
         $item->save();
-        return redirect('/admin/content/page');
+        return redirect('/admin/content/tag');
     }
     public function destroy($id){
-        $item  = ContentPageModel::find($id);
+        $item  = ContentTagModel::find($id);
 
         $item->delete();
-        return redirect('/admin/content/page');
+        return redirect('/admin/content/tag');
     }
 }
