@@ -6,7 +6,7 @@
 @section('content')
     <h1>Quản trị menu items</h1>
     <div style="margin:20px 0">
-        <a href="{{url('/admin/menuitems/create')}}" class="btn btn-success">Thêm menu items<trang></trang></a>
+        <a href="{{url('/admin/menuitems/create')}}" class="btn btn-success">Thêm menu items</a>
     </div>
     <div class="tables">
         <div class="table-responsive bs-example widget-shadow">
