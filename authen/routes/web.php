@@ -134,9 +134,9 @@ Route::prefix('admin')->group(function (){
     Route::get('menu/{id}/edit','Admin\MenuController@edit');
     Route::get('menu/{id}/delete','Admin\MenuController@delete');
 
-    Route::post('menu','Admin\ContentMenuController@store');
-    Route::post('menu/{id}','Admin\ContentMenuController@update');
-    Route::post('menu/{id}/delete','Admin\ContentMenuController@destroy');
+    Route::post('menu','Admin\MenuController@store');
+    Route::post('menu/{id}','Admin\MenuController@update');
+    Route::post('menu/{id}/delete','Admin\MenuController@destroy');
 
 
     Route::get('menuitems','Admin\MenuItemController@index');
@@ -168,6 +168,9 @@ Route::prefix('admin')->group(function (){
         return view('admin.content.config.index');
     });
 
+    Route::get('config','Admin\ConfigController@index');
+
+    Route::post('config','Admin\ConfigController@store');
     //--------Route admin newletters--------
     //------------------------------------
     //------------------------------------
