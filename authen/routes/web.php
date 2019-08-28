@@ -73,6 +73,14 @@ Route::prefix('admin')->group(function (){
     Route::get('shop/customer',function (){
         return view('admin.content.shop.customer.index');
     });
+
+    Route::get('shop/shipper',function (){
+        return view('admin.content.shop.shipper.index');
+    });
+
+    Route::get('shop/seller',function (){
+        return view('admin.content.shop.seller.index');
+    });
     Route::get('shop/brand',function (){
         return view('admin.content.shop.brand.index');
     });
@@ -153,6 +161,15 @@ Route::prefix('admin')->group(function (){
     Route::get('users',function (){
         return view('admin.content.users.index');
     });
+
+    Route::get('users','Admin\AdminManagerController@index');
+    Route::get('users/create','Admin\AdminManagerController@create');
+    Route::get('users/{id}/edit','Admin\AdminManagerController@edit');
+    Route::get('users/{id}/delete','Admin\AdminManagerController@delete');
+
+    Route::post('users','Admin\AdminManagerController@store');
+    Route::post('users/{id}','Admin\AdminManagerController@update');
+    Route::post('users/{id}/delete','Admin\AdminManagerController@destroy');
 
     //--------Route admin media--------
     //------------------------------------
